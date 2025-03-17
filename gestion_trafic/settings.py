@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
-import os.path
+import os
 import sys
 import dj_database_url
 from django.core.management.utils import get_random_secret_key
@@ -82,6 +82,7 @@ WSGI_APPLICATION = 'gestion_trafic.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
+
 DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
 
 if DEVELOPMENT_MODE is True:

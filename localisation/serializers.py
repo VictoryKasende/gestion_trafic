@@ -14,3 +14,9 @@ class ItineraireSerializer(serializers.ModelSerializer):
 class ItineraireRequestSerializer(serializers.Serializer):
     depart = serializers.CharField(max_length=255)
     arrivee = serializers.CharField(max_length=255)
+
+
+class ItineraireCoordonneesRequestSerializer(serializers.Serializer):
+    depart_latitude = serializers.FloatField()
+    depart_longitude = serializers.FloatField()
+    arrivee = serializers.CharField(max_length=255)
